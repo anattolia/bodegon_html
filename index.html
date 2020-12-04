@@ -6,77 +6,95 @@
     <title>Bodegón</title>
 
     <style>
+          html{
+            height:100%;
+            width: 100%;    
+          }
+          body {
+           height:100%;
+           width: 100%;
+           overflow:hidden;
+           overflow: scroll;
+          }
 
-        .fondo {
+        #fondo {
             background-color: #ec4836;
             width: 100%;
             height: 100%;
-            position: fixed;
-            display: flex;
+            position: relative;
+            display: block;
+            overflow: scroll;
         }
-        .sofa {
+        #container{
+            width: 1080px;
+            height: 720px;
+            position: relative;
+            display: block;
+            overflow: scroll;
+        }
+        #fondo .sofa {
             background-color: #048eff;
             width: 950px;
             height: 70px;
             top: 395px; left: 273px;
-            position: fixed;
+            position: sticky;
             border-radius: 10px;
         }
-        .sofa.esp {
+        #fondo .sofa.esp {
             background-color: #048eff;
             width: 900px;
             height: 200px;
             top: 190px; left: 300px;
-            position: fixed;
+            position: absolute;
             border-radius: 10px;
             text-align: center;
             vertical-align: middle;
             display: flex;
              
         }
-        .sofa.boton_1 {
+        #fondo .sofa.boton_1 {
             background-color: rgba(5, 73, 129, 0.5);
             width: 15px;
             height: 15px;
             top: 290px; left: 450px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
             display: flex;
         }
-        .sofa.boton_2 {
+        #fondo .sofa.boton_2 {
             background-color: rgba(5, 73, 129, 0.5);
             width: 15px;
             height: 15px;
             top: 290px; left: 600px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
             display: flex;
         }
-        .sofa.boton_3 {
+        #fondo .sofa.boton_3 {
             background-color: rgba(5, 73, 129, 0.5);
             width: 15px;
             height: 15px;
             top: 290px; left: 750px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
       }
-        .sofa.boton_4 {
+      #fondo .sofa.boton_4 {
             background-color: rgba(5, 73, 129, 0.5);
             width: 15px;
             height: 15px;
             top: 290px; left: 900px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
         }
-        .sofa.boton_5 {
+        #fondo .sofa.boton_5 {
             background-color: rgba(5, 73, 129, 0.5);
             width: 15px;
             height: 15px;
             top: 290px; left: 1050px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
         }
-        .sofa.pata_l {
+        #fondo .sofa.pata_l {
             width: 5px;
             height: 0;
             background-color: transparent;
@@ -84,10 +102,10 @@
             border-right: 25px solid transparent;
             border-top: 71px solid rgb(255, 186, 12);
             top: 465px; left: 400px;
-            position: fixed;
+            position: absolute;
             border-radius: 0%;
         }
-        .sofa.pata_r {
+        #fondo .sofa.pata_r {
             width: 5px;
             height: 0;
             background-color: transparent;
@@ -95,28 +113,28 @@
             border-right: 25px solid transparent;
             border-top: 70px solid rgb(255, 186, 12);
             top: 464px; left: 1040px;
-            position: fixed;
+            position: absolute;
             border-radius: 0%;
         }
-        .pata_trampa{
+        #fondo .pata_trampa{
             background-color: #555;
             width: 50px;
             height: 16px;
             top: 524px; left: 1040px;
-            position: fixed;
+            position: absolute;
         }
-        .gato {
+        #fondo .gato {
             height: 60px;
             width: 130px;
             background-color: rgb(255,255,255);
             border-radius: 50px 50px 25px 25px;
             top: 340px; left: 330px;
-            position: fixed;
+            position: absolute;
             animation-duration: 3s;
             animation-name: slidein;
       }
 
-      .gato:hover{
+      #fondo .gato:hover{
             transform: skew(30deg);
       }
 
@@ -127,19 +145,19 @@
       width: -40%; 
       }
       }
-      .gato.cabeza {
+      #fondo .gato.cabeza {
             height: 50px;
             width: 50px;
             background-color: rgb(255,255,255);
             border-radius: 20px 20px 50px 50px;
             top: 330px; left: 410px;
-            position: fixed;
+            position: absolute;
             box-shadow: 2px 2px 5px grey;
       }
-      .gato:hover {
+      #fondo .gato:hover {
             transform: skew(0deg);
       }
-      .gato.cabeza.oreja_l {
+      #fondo .gato.cabeza.oreja_l {
 	width: 0;
 	height: 0;
 	border-left: 10px solid transparent;
@@ -148,14 +166,14 @@
       border-radius: 0px 0px 0px 0px;
       background-color: transparent;
       top: 312px; left: 411px;
-      position: fixed;
+      position: absolute;
       box-shadow: 0px 0px 0px grey;
       }
-      .gato.cabeza.oreja_l:hover {
+      #fondo .gato.cabeza.oreja_l:hover {
       transform: skew(20deg);
       }
 
-      .gato.cabeza.oreja_r {
+      #fondo .gato.cabeza.oreja_r {
 	width: 0;
 	height: 0;
 	border-left: 10px solid transparent;
@@ -164,14 +182,14 @@
       background-color: transparent;
       border-radius: 0px 0px 0px 0px;
       top: 312px; left: 440px;
-      position: fixed;
+      position: absolute;
       box-shadow: 0px 0px 0px grey;
       }
-      .gato.cabeza.oreja_r:hover {
+      #fondo .gato.cabeza.oreja_r:hover {
       transform: skew(-20deg);
       }
 
-      .gato.cabeza.nariz {
+      #fondo .gato.cabeza.nariz {
 	width: 0;
 	height: 0;
 	border-left: 7px solid transparent;
@@ -179,29 +197,29 @@
 	border-top: 10px solid rgb(244, 202, 202);
       border-radius: 0px 0px 0px 0px;
       top: 360px; left: 429px;
-      position: fixed;
+      position: absolute;
       box-shadow: 0px 0px 0px grey;
       }
-      .gato.cola {
+      #fondo .gato.cola {
             height: 120px;
             width: 15px;
             background-color: rgb(255,255,255);
             border-radius: 50px 50px 50px 50px;
             top: 365px; left: 337px;
-            position: fixed;
+            position: absolute;
             transform: skew(5deg);
       }
-      .gato.cola:hover {
+      #fondo .gato.cola:hover {
             transform: skew(-35deg);
             height: 70px;
             top: 380px; left: 300px;
       }
-      .gato.miau {
+      #fondo .gato.miau {
             height: 50px;
             width: 50px;
             border-radius: 20px 20px 50px 50px;
             top: 330px; left: 410px;
-            position: fixed;
+            position: absolute;
             background-color: transparent;
             font-family: fantasy;
             text-align: center;
@@ -209,171 +227,171 @@
             color:rgb(255, 255, 255);
             
       }
-      .gato.miau:hover {
+      #fondo .gato.miau:hover {
             transform: translate(60px,-30px);
             
       }
-      .mesa_trap{
+      #fondo .mesa_trap{
             border-top: 170px solid #555;
 	      border-left: 100px solid transparent;
 	      border-right: 100px solid transparent;
 	      height: 0;
 	      width: 500px;
             top: 370px; left: 500px;
-            position: fixed;
+            position: absolute;
             border-radius: 50px;
       }
-      .mesa_vacio {
+      #fondo .mesa_vacio {
             border-top: 76px solid #048eff;
 	      border-left: 48px solid transparent;
 	      border-right: 48px solid transparent;
 	      height: 0;
 	      width: 523px;
             top: 399px; left: 540px;
-            position: fixed;
+            position: absolute;
             border-radius: 50px;
       }
-        .mesa_vacio2 {
+      #fondo .mesa_vacio2 {
             border-top: 60px solid #ec4836;
 	      border-left: 38px solid transparent;
 	      border-right: 38px solid transparent;
 	      height: 0;
 	      width: 460px;
             top: 464px; left: 582px;
-            position: fixed;
+            position: absolute;
         }
-       .caf_bol {
+        #fondo .caf_bol {
             background-color: #1c1c1c;
             width: 30px;
             height: 30px;
             top: 100px; left: 1000px;
-            position: fixed;
+            position: absolute;
             border-radius: 50%;
       }
-      .caf_top {
+      #fondo .caf_top {
             background-color: #1c1c1c;
             width: 100px;
             height: 30px;
             top: 133px; left: 963px;
-            position: fixed;
+            position: absolute;
             border-radius: 25px 25px 0px 0px;
       }
-      .caf_palito {
+      #fondo .caf_palito {
             background-color: rgb(255, 255, 255);
             width: 7px;
             height: 163px;
             top: 166px; left: 1010px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_embolo {
+      #fondo .caf_embolo {
             background-color: rgb(255, 255, 255);
             width: 100px;
             height: 10px;
             top: 330px; left: 963px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_cuerpo {
+      #fondo .caf_cuerpo {
             background-color: rgb(0,0,0,0.2);
             width: 100px;
             height: 170px;
             top: 166px; left: 963px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_pico {
+      #fondo .caf_pico {
             width: 0;
 	      height: 0;
 	      border-top: 0px solid transparent;
 	      border-right: 18px solid  rgb(0,0,0,0.2);
 	      border-bottom: 20px solid transparent;
             top: 166px; left: 945px;
-            position: fixed;
+            position: absolute;
         }
-      .caf_cafe {
+        #fondo .caf_cafe {
             background-color: rgba(43, 37, 29, 0.5);
             width: 99px;
             height: 65px;
             top: 265px; left: 964px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_manija_top {
+      #fondo .caf_manija_top {
             background-color: #1c1c1c;
             width: 40px;
             height: 15px;
             top: 165px; left: 1050px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_manija_v {
+      #fondo .caf_manija_v {
             background-color: #1c1c1c;
             width: 15px;
             height: 150px;
             top: 180px; left: 1075px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_manija_btt {
+      #fondo .caf_manija_btt {
             background-color: #1c1c1c;
             width: 40px;
             height: 15px;
             top: 322px; left: 1050px;
-            position: fixed;
+            position: absolute;
       }
-      .caf_bott {
+      #fondo .caf_bott {
             background-color: #1c1c1c;
             width: 105px;
             height: 30px;
             top: 340px; left: 960px;
-            position: fixed;
+            position: absolute;
       }
-      .taza {
+      #fondo .taza {
             background-color: rgb(255, 247, 0);
             width: 70px;
             height: 90px;
             top: 280px; left: 730px;
-            position: fixed;
+            position: absolute;
       }
-      .taza.sombra {
+      #fondo .taza.sombra {
             background-color: rgb(199, 193, 5, 0.8);
             width: 30px;
             height: 90px;
             top: 280px; left: 770px;
-            position: fixed;
+            position: absolute;
       }
-      .taza.sombra_2 {
+      #fondo .taza.sombra_2 {
             background-color: rgba(109, 105, 3, 0.5);
             width: 10px;
             height: 90px;
             top: 280px; left: 790px;
-            position: fixed;
+            position: absolute;
       }
-      .taza.oreja {
+      #fondo .taza.oreja {
       height: 55px;
       width: 20px;
       background-color: #ffeb0a;
       top: 300px; left: 710px;
-      position: fixed;
+      position: absolute;
       border-radius: 10px 0px 0px 10px;
       }
       
-      .taza.oreja_vacio {
+      #fondo .taza.oreja_vacio {
       height: 35px;
       width: 12px;
       background-color: #048eff;
       top: 310px; left: 717px;
-      position: fixed;
+      position: absolute;
       border-radius: 5px 0px 0px 5px;
       }
-      .cuchara {
+      #fondo .cuchara {
             width: 8px;
             height: 30px;
             transform: skew(30deg);
             background: rgb(109, 109, 109);
             top: 250px; left: 730px;
-            position: fixed;
+            position: absolute;
       }
-      .cuchara:hover {
+      #fondo .cuchara:hover {
             transform: skew(-40deg);
             background: rgb(109, 109, 109);
             top: 250px; left: 790px;
-            position: fixed;
+            position: absolute;
       }
       
 
@@ -381,44 +399,48 @@
 </head>
 
 <body>
-      <div class="fondo">
-      <div class="sofa esp"> </div>
-      <div class="sofa"></div>
-      <div class="sofa boton_1"></div>
-      <div class="sofa boton_2"></div>
-      <div class="sofa boton_3"></div>
-      <div class="sofa boton_4"></div>
-      <div class="sofa boton_5"></div>
-      <div class="mesa_trap"></div>
-      <div class="mesa_vacio"></div>
-      <div class="mesa_vacio2"></div>
-      <div class="sofa pata_l"></div>
-      <div class="sofa pata_r"></div>
-      <div class="pata_trampa"></div>
-      <div class="gato"></div>
-      <div class="gato cabeza"></div>
-      <div class="gato cabeza oreja_l"></div>
-      <div class="gato cabeza oreja_r"></div>
-      <div class="gato cabeza nariz"></div>
-      <div class="gato miau">miau</div>
-      <div class="gato cola"></div>
-      <div class="caf_bol"></div>
-      <div class="caf_top"></div>
-      <div class="caf_palito"></div>
-      <div class="caf_embolo"></div>
-      <div class="caf_cafe"></div>
-      <div class="caf_cuerpo"></div>
-      <div class="caf_pico"></div>
-      <div class="caf_manija_top"></div>
-      <div class="caf_manija_v"></div>
-      <div class="caf_manija_btt"></div>
-      <div class="caf_bott"></div>
-      <div class="taza"></div>
-      <div class="taza sombra"></div>
-      <div class="taza sombra_2"></div>
-      <div class="taza oreja"></div>
-      <div class="taza oreja_vacio"></div>
-      <div class="cuchara"></div>
-</div>
+            <div id="fondo">
+                  <div id="container">
+            <div class="sofa esp"> </div>
+            <div class="sofa"></div>
+            <div class="sofa boton_1"></div>
+            <div class="sofa boton_2"></div>
+            <div class="sofa boton_3"></div>
+            <div class="sofa boton_4"></div>
+            <div class="sofa boton_5"></div>
+            <div class="mesa_trap"></div>
+            <div class="mesa_vacio"></div>
+            <div class="mesa_vacio2"></div>
+            <div class="sofa pata_l"></div>
+            <div class="sofa pata_r"></div>
+            <div class="pata_trampa"></div>
+            <div class="gato"></div>
+            <div class="gato cabeza"></div>
+            <div class="gato cabeza oreja_l"></div>
+            <div class="gato cabeza oreja_r"></div>
+            <div class="gato cabeza nariz"></div>
+            <div class="gato miau">miau</div>
+            <div class="gato cola"></div>
+            <div class="caf_bol"></div>
+            <div class="caf_top"></div>
+            <div class="caf_palito"></div>
+            <div class="caf_embolo"></div>
+            <div class="caf_cafe"></div>
+            <div class="caf_cuerpo"></div>
+            <div class="caf_pico"></div>
+            <div class="caf_manija_top"></div>
+            <div class="caf_manija_v"></div>
+            <div class="caf_manija_btt"></div>
+            <div class="caf_bott"></div>
+            <div class="taza"></div>
+            <div class="taza sombra"></div>
+            <div class="taza sombra_2"></div>
+            <div class="taza oreja"></div>
+            <div class="taza oreja_vacio"></div>
+            <div class="cuchara"></div>
+      </div>
+      </div>
+</div> 
+
 </body>
 </html>
